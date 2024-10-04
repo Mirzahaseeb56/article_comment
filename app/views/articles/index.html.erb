@@ -1,0 +1,16 @@
+<h1> LISTING OF ALL ARTICLES</h1>
+<ol>
+<% @articles.each do |article| %>
+   
+    <li>
+ 
+   title: <%= article.title %>
+   <br>
+   body: <%= article.body %>
+   </li>
+   <%= link_to 'create article', new_article_path %>
+   <%= link_to 'edit article', edit_article_path(article) %>
+   <%= button_to 'Delete Article', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+</ol>

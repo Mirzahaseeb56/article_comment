@@ -1,0 +1,18 @@
+<h1> creating new article </h1>
+<%= form_with model: @article do |article| %>
+    <div>
+    <%= article.label :title %>
+    <%= article.text_field :title %>
+    <br>
+    </div>
+    <br>
+    <div>
+    <%= article.label :body %>
+    <%= article.text_area :body %>
+    <br>
+    </div>
+    <div>
+    <%= article.submit 'create new article' %>
+
+
+<% end %>

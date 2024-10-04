@@ -1,0 +1,19 @@
+<h1>Edit Article</h1>
+<%= form_with model: @article do |article| %>
+   <div>
+    <%= article.label :title %>
+    <%= article.text_field :title %>
+    <br>
+    </div>
+    <div>
+    <%= article.label :body %>
+    <%= article.text_area :body %>
+    <br>
+    </div>
+    <div>
+    <%= article.submit 'update article' %>
+    </div>
+
+
+<% end %>
+
